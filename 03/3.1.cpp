@@ -140,7 +140,7 @@ public:
     }
 
 
-    void get_all_print_calc()
+  /*  void get_all_print_calc()
     {
 
         get_print_add();
@@ -150,7 +150,7 @@ public:
         get_print_divide_1_2();
         get_print_divide_2_1();
 
-    }
+    }*/
 
 
 };
