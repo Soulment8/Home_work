@@ -20,7 +20,8 @@ private:
     }
     void get_counter_print()
     {
-        cout << " Сейчас ваше значение = " << counter << endl << endl;
+        cout << endl << " Сейчас ваше значение = " << counter << endl
+            << endl << endl;
     }
 
 public:
@@ -64,7 +65,7 @@ public:
         }
         else
         {
-            cout << " Некорректное значение! " << endl;
+            cout << " Некорректное значение! " << endl << endl;
         }
 
         get_menegment_counter(check_cmd);
@@ -78,7 +79,7 @@ void check_n(int& n)
     cin >> n;
 
     while (cin.fail()) {
-        cout << " Некорректное значение! " << endl;
+        cout << endl << " Некорректное значение! " << endl << endl;
         cin.clear();
         cin.ignore(1000, '\n');
         cout << " Введите начальное занчение счетчика: ";
@@ -103,16 +104,19 @@ int main()
         int n = 0;
         check_n(n);
         Counter count(n);
+        cout << endl << endl;
         count.get_menegment_counter(check_cmd);
     }
     else if (check_cmd == "no")
     {
         Counter count;
+        cout << endl << endl;
         count.get_menegment_counter(check_cmd);
     }
     else if (check_cmd == "1")
     {
         Counter count(check_cmd);
+        cout << endl << endl;
         count.get_menegment_counter(check_cmd);
     }
     else

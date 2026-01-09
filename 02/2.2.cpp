@@ -4,18 +4,16 @@
 
 using namespace std;
 
-struct Bank
+struct  Bank
 {
-    int number_cheque;
+    int number_cheque = 0;
     string name;
-    double balance;
+    double balance = 0;
 };
 
-void Change_balance(Bank& people)
+void Change_balance(Bank& people, int bal)
 {
-    cout << endl << " Введите новый баланс: ";
-        cin >> people.balance;
-        cout << endl;
+    people.balance = bal;
 }
 
 int main()
@@ -23,22 +21,29 @@ int main()
     setlocale(LC_ALL, "RUS");
     SetConsoleOutputCP(1251);
     SetConsoleCP(1251);
-    
+
+    int bal;
     Bank people;
 
     cout << " Введите номер счета: ";
     cin >> people.number_cheque;
 
     cout << " Введите имя владелца: ";
-    cin >> people.name; 
-    
+    cin >> people.name;
+
     cout << " Введите баланс: ";
-    cin >> people.balance; 
+    cin >> people.balance;
 
-    Change_balance(people);
+    cout << endl << " Введите новый баланс: ";
+    cin >> bal;
+    cout << endl;
 
-    cout << endl << " Ваш счет: " << people.number_cheque << ",  " << people.name << ", " << people.balance << endl;
+    Change_balance(people, bal);
 
-    
+    cout << endl << " Ваш счет: "
+        << people.number_cheque << ",  " << people.name << ", " << people.balance
+        << endl;
+
+
 }
 

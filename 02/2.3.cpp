@@ -4,7 +4,7 @@
 
 using namespace std;
 
-struct Address
+struct  Address
 {
     string city;
     string street;
@@ -13,7 +13,7 @@ struct Address
     int index;
 };
 
-void Print_Address(Address& a_x)
+void Print_Address(const Address& a_x)
 {
     cout << " Город: " << a_x.city << endl;
     cout << " Улица: " << a_x.street << endl;
